@@ -1,0 +1,126 @@
+@import "footer.css";
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "robotoItalic";
+  src: url("../fonts/Roboto-BlackItalic.ttf");
+}
+
+/* Top Nav Bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: yellow;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  padding: 5px 5px 5px 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}
+/* Add some padding inside the card container */
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 70px;
+  padding-left: 20px;
+  align-self: center;
+  align-items: center;
+  grid-template-columns: auto auto auto auto;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: thick;
+  float: left;
+  border-color: green;
+  margin-top: 5%;
+  position: absolute;
+  left: 0;
+}
+
+.parent {
+  position: relative;
+  align-content: center;
+  /* align-items: center; */
+}
+
+.center-text {
+  text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .card-layout-1 {
+    width: max-content;
+  }
+}
+
+@media (max-width: 991px) {
+  .col-margin {
+    margin-bottom: 15px;
+  }
+}
+/* Font Awesome icons */
+/* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-github {
+  background: white;
+  color: black;
+} */
