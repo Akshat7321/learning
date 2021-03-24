@@ -1,5 +1,6 @@
 import Home from "../views/Home.js";
 import Signin from "../views/Signin.js";
+import {isLoggedin, logOut} from "./loginStatus.js";
 console.log("Executing index.js");
 
 const navigateTo = url=>{
@@ -46,15 +47,52 @@ const router = async() => {
 
 window.addEventListener("popstate", router);
 
+function NavBar(){
+    console.log("called NavBAr");
+    if(isLoggedin()){
+        document.getElementById("navbarSupportedContent").innerHTML = 
+        ` <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/" data-link>Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/profile" data-link>Profile</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/home" logout>Logout</a>
+        </li>
+    </ul>
+        `
+    }
+    else{
+        document.getElementById("navbarSupportedContent").innerHTML = 
+        ` <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/" data-link>Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/signin" data-link>Sign In</a>
+        </li>
+    </ul>
+        `
+    }
+}
+
 document.addEventListener("DOMContentLoaded",()=>{
     console.log("Hello world");
+    NavBar();
     document.body.addEventListener("click", e=>{
         if(e.target.matches("[data-link]")){
-            e.preventDefault();
+            e.preventDefault();  
             navigateTo(e.target.href);
             console.log(location.pathname);
             ///router();
         } 
+        else if(e.target.matches("[logout]")){
+            e.preventDefault();
+            logOut();
+            NavBar();
+        }
      });
      router();
 })

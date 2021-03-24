@@ -17,6 +17,7 @@ export default class extends Abstractview{
       <div class="form__input-group">
         <input id="signinUserName" type="text" class="form__input" autofocus placeholder="Username or email" required>
         <div class="form__input-error-message"></div>
+        <p>Hi <span id="dataBindedName"> </span></p>
       </div>
       <div class="form__input-group">
         <input id="signinPassword" type="password" class="form__input" autofocus placeholder="Password" required>

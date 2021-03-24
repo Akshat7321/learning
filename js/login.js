@@ -1,3 +1,4 @@
+import {DataBinder} from "./loginDataBinding.js";
 
 function setFormMessage(formElement, type, message){
     const messageElement = formElement.querySelector(".form__message");
@@ -58,7 +59,19 @@ function clearInputError(inputElement){
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
 
+
 function start(){
+    var obj = {};
+    obj.Message ="Hello";
+
+    var dataBinder = new DataBinder({
+        "model" : obj,
+        "property" : "Message"
+    });
+
+    dataBinder.addDataBinding("signinUserName", "value", "keyup");
+    dataBinder.addDataBinding("dataBindedName", "innerHTML");
+    obj.Message ="";
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
@@ -120,7 +133,7 @@ function start(){
                     break;
                 case "emailid":
                     if(!validateEmail(e.target.value))
-                        setInputError(inputElement,"Invalid email id");
+                    setInputError(inputElement,"Invalid email id");
                     break;
                 case "signinPassword":
                     if(!validatePassword(e.target.value))
