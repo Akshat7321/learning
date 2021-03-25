@@ -10,7 +10,7 @@ export default class extends Abstractview{
         return `
         <div>
   Enter Stock Code<input type="text" name="code" id="code"><br/>
-  <input type="button" class="btn btn-primary" value="Search" onclick="searchstock()">
+  <input type="button" class="btn btn-primary" value="Search" onclick="searchstock">
   <p id="stockdata"></p>
 </div>
 <script>

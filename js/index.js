@@ -1,6 +1,7 @@
 import Home from "../views/Home.js";
 import Signin from "../views/Signin.js";
 import {isLoggedin, logOut} from "./loginStatus.js";
+import  Stock  from "../views/Stock.js"
 console.log("Executing index.js");
 
 const navigateTo = url=>{
@@ -15,6 +16,7 @@ const router = async() => {
     const routes = [
         {path: "/", view: Home},
         {path: "/signin", view: Signin},
+        {path: "/stock", view:Stock},
       ];
 
     const potentialMatchs = routes.map(route => {
@@ -55,6 +57,19 @@ function NavBar(){
         <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="/" data-link>Home</a>
         </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Credit Card</a></li>
+              <li><a class="dropdown-item" href="#">Checking Account</a></li>
+              <li><a class="dropdown-item" href="#">Savings Account</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/stock" data-link>Stocks</a>
+        </li>
         <li class="nav-item">
         <a class="nav-link" href="/profile" data-link>Profile</a>
         </li>
@@ -62,6 +77,10 @@ function NavBar(){
         <a class="nav-link" href="/home" logout>Logout</a>
         </li>
     </ul>
+    <form class="d-flex" style="float: right;">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
         `
     }
     else{
@@ -70,10 +89,29 @@ function NavBar(){
         <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="/" data-link>Home</a>
         </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Credit Card</a></li>
+              <li><a class="dropdown-item" href="#">Checking Account</a></li>
+              <li><a class="dropdown-item" href="#">Savings Account</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/stock" data-link>Stocks</a>
+        </li>
         <li class="nav-item">
         <a class="nav-link" href="/signin" data-link>Sign In</a>
         </li>
-    </ul>
+              
+        </ul>
+        <form class="d-flex" style="float: right;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
         `
     }
 }
