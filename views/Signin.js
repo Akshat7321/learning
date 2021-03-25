@@ -3,7 +3,7 @@ import {start} from "../js/login.js"
 export default class extends Abstractview{
     constructor(params){
         super(params);
-        this.setTitle("Timeline");
+        this.setTitle("Sign In - TNL Bank");
     }
 
     async getHtml(){
