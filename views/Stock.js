@@ -8,27 +8,32 @@ export default class extends Abstractview{
 
     async getHtml(){
         return `
-        <div>
-  Enter Stock Code<input type="text" name="code" id="code"><br/>
-  <input type="button" class="btn btn-primary" value="Search" onclick="searchstock">
+        <div class="row">
+        <div class="col-md-3">
+
+  Select from Stock Market Leader
+  </div>
+  <div class="col-md-5">
+  <select class="form-select form-select-md col-lg-5" aria-label=".form-select-sm example" name="code" id="code">
+  <option selected>Open this select menu</option>
+  <option value="TSLA">Tesla Inc</option>
+  <option value="AAPL">Apple Inc</option>
+  <option value="AMZN">Amazon.com Inc</option>
+  <option value="VIAC">Viacomcbs Inc Cl B</option>
+  <option value="MSFT">Micosoft Corp</option>
+  <option value="BA">Boeing Company</option>
+  <option value="FB">Facebook Inc</option>
+  <option value="NIO">Nio Inc</option>
+  <option value="INTC">Intel Corp</option>
+</select><br/><br/>
+  <input type="button" class="btn btn-primary" value="Search" onclick="searchstock()">
   <p id="stockdata"></p>
 </div>
-<script>
-var stocks = new Stocks('6W6EITDI2T0S3SN9'); // Replace with your own
-
-// Let's get the stock data of Tesla Inc for the last 10 minutes
-
-async function searchstock(){
-  var code = document.getElementById("code").value; 
-  var result = await stocks.timeSeries({
-    symbol: code,
-    interval: 'daily',
-    amount: 10
-   });
-   document.getElementById("stockdata").innerHTML=JSON.stringify(result);
-  console.log(JSON.stringify(result)); 
-}
-</script>
+</div>
+<script src="./js/stocklogic.js"></script>
 `
     }
+    async initiateScript(){
+      start();
+  }
 }
