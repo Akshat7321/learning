@@ -2,6 +2,7 @@ import Home from "../views/Home.js";
 import Signin from "../views/Signin.js";
 import {isLoggedin, logOut} from "./loginStatus.js";
 import  Stock  from "../views/Stock.js"
+import Investments from "../views/Investments.js"
 console.log("Executing index.js");
 
 const navigateTo = url=>{
@@ -17,6 +18,7 @@ const router = async() => {
         {path: "/", view: Home},
         {path: "/signin", view: Signin},
         {path: "/stock", view:Stock},
+        {path: "/investments", view:Investments},
       ];
 
     const potentialMatchs = routes.map(route => {
@@ -76,6 +78,9 @@ function NavBar(){
         <li class="nav-item">
         <a class="nav-link" href="/home" logout>Logout</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/investments" data-link>Investments</a>
+        </li>
     </ul>
     <form class="d-flex" style="float: right;">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -105,7 +110,9 @@ function NavBar(){
         <li class="nav-item">
         <a class="nav-link" href="/signin" data-link>Sign In</a>
         </li>
-              
+        <li class="nav-item">
+        <a class="nav-link" href="/investments" data-link>Investments</a>
+        </li>
         </ul>
         <form class="d-flex" style="float: right;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
