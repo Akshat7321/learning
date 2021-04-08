@@ -15,7 +15,7 @@
 
 .investments-section1 {
   background: #f5f5f1;
-  border: `87sa 25px;
+  border: 25px;
 }
 
 .investments-section2 {
@@ -74,6 +74,14 @@
 
 .buckets-button:hover {
   opacity: 0.7;
+}
+
+.buckets-button-allignment {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  /* -ms-transform: translateY(-10%);
+  transform: translateY(-10%); */
 }
 
 .horizontal-center-button {
