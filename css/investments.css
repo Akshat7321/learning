@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "roboto-light";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "robotoItalic";
+  src: url("../fonts/Roboto-BlackItalic.ttf");
+}
+
+.investments-section1 {
+  background: #f5f5f1;
+  border: 25px;
+}
+
+.investments-section2 {
+  background: white;
+  margin: 25px;
+}
+
+.parent-bucket {
+  position: relative;
+}
+
+.child-bucket-element {
+  position: absolute;
+  bottom: 20px;
+}
+
+.section-heading {
+  font-family: roboto-light;
+  text-align: center;
+  font-size: 40px;
+}
+
+.section-subheading {
+  font-family: roboto-regular;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+}
+
+.bucket-heading {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: roboto-regular;
+  text-align: left;
+  font-size: 20px;
+}
+
+.bucket-body {
+  font-family: roboto-light;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.buckets-button {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: roboto-regular;
+  background-color: #3434ff;
+  border-radius: 4px;
+  color: #f5f5f1;
+  border: none;
+  font-size: 20px;
+}
+
+.buckets-button:hover {
+  opacity: 0.7;
+}
+
+.buckets-button-allignment {
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  /* -ms-transform: translateY(-10%);
+  transform: translateY(-10%); */
+}
+
+.horizontal-center-button {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.section-bucket-separator {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-bucket-separator {
+    display: block;
+  }
+}

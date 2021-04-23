@@ -33,7 +33,5 @@ export default class extends Abstractview{
 <script src="./js/stocklogic.js"></script>
 `
     }
-    async initiateScript(){
-      start();
-  }
+    
 }
