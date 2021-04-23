@@ -13,8 +13,8 @@ export default class extends Abstractview{
 
   Select from Stock Market Leader
   </div>
-  <div class="col-md-5">
-  <select class="form-select form-select-md col-lg-5" aria-label=".form-select-sm example" name="code" id="code">
+  <div class="col-md-7">
+  <select class="form-select form-select-md col-lg-5" aria-label=".form-select-sm example" name="code" id="code" multiple>
   <option selected>Open this select menu</option>
   <option value="TSLA">Tesla Inc</option>
   <option value="AAPL">Apple Inc</option>
@@ -26,7 +26,7 @@ export default class extends Abstractview{
   <option value="NIO">Nio Inc</option>
   <option value="INTC">Intel Corp</option>
 </select><br/><br/>
-  <input type="button" class="btn btn-primary" value="Search" onclick="searchstock()">
+<input type="submit" onclick="searchstock()" class="btn btn-primary" value="Select">
   <p id="stockdata"></p>
 </div>
 </div>
